@@ -304,66 +304,66 @@ p a:hover { color: red; }
          
             <a href="home.php" class="tagc1">Rails</a>
             
-            <a href="home.html" class="tagc2">JavaScript</a>
+            <a href="home.php" class="tagc2">JavaScript</a>
             
-            <a href="home.html" class="tagc1">JQuery</a>
+            <a href="home.php" class="tagc1">JQuery</a>
             
-            <a href="home.html" class="tagc2">HTML5</a>
+            <a href="home.php" class="tagc2">HTML5</a>
             
-            <a href="home.html" class="tagc1">CSS3</a>
+            <a href="home.php" class="tagc1">CSS3</a>
             
-            <a href="home.html" class="tagc1">AngularJS</a>
+            <a href="home.php" class="tagc1">AngularJS</a>
             
-            <a href="home.html" class="tagc1">Java</a>
+            <a href="home.php" class="tagc1">Java</a>
             
-            <a href="home.html" class="tagc2">Android</a>
+            <a href="home.php" class="tagc2">Android</a>
             
-            <a href="home.html" class="tagc2">IOS</a>
+            <a href="home.php" class="tagc2">IOS</a>
             
             <a href="# class="tagc2">Educational ERP</a>
             
-            <a href="home.html" class="tagc2"><b>OSTRYA</b></a>
+            <a href="home.php" class="tagc2"><b>OSTRYA</b></a>
             
-            <a href="home.html" class="tagc1">LABS</a>
+            <a href="home.php" class="tagc1">LABS</a>
             
-            <a href="home.html" class="tagc2">Postgre</a>
+            <a href="home.php" class="tagc2">Postgre</a>
             
-            <a href="home.html" class="tagc2">MS-SQL</a>
+            <a href="home.php" class="tagc2">MS-SQL</a>
             
-            <a href="home.html" class="tagc2">2015</a>
+            <a href="home.php" class="tagc2">2015</a>
             
-            <a href="home.html" class="tagc1">MySQL</a>
+            <a href="home.php" class="tagc1">MySQL</a>
             
-            <a href="home.html" class="tagc2">windows</a>
+            <a href="home.php" class="tagc2">windows</a>
             
-            <a href="home.html" class="tagc2">UI</a>
+            <a href="home.php" class="tagc2">UI</a>
             
-            <a href="home.html" class="tagc2">Responsive</a>
+            <a href="home.php" class="tagc2">Responsive</a>
             
-            <a href="home.html" class="tagc2">C#</a>
+            <a href="home.php" class="tagc2">C#</a>
             
-            <a href="home.html" class="tagc2">VB</a>
+            <a href="home.php" class="tagc2">VB</a>
             
-            <a href="home.html" class="tagc2">NodeJS</a>
+            <a href="home.php" class="tagc2">NodeJS</a>
             
-            <a href="home.html" class="tagc1">ASP.NET</a>
+            <a href="home.php" class="tagc1">ASP.NET</a>
             
-            <a href="home.html" class="tagc1">MVC</a>
+            <a href="home.php" class="tagc1">MVC</a>
             
-            <a href="home.html" class="tagc2">Bootstrap</a>
+            <a href="home.php" class="tagc2">Bootstrap</a>
             
-            <a href="home.html" class="tagc2">SQL</a>
+            <a href="home.php" class="tagc2">SQL</a>
             
-            <a href="home.html" class="tagc2">Clean Code</a>
-            <a href="home.html" class="tagc1">ASP.NET</a>
+            <a href="home.php" class="tagc2">Clean Code</a>
+            <a href="home.php" class="tagc1">ASP.NET</a>
             
-            <a href="home.html" class="tagc1">MVC</a>
+            <a href="home.php" class="tagc1">MVC</a>
             
-            <a href="home.html" class="tagc2">Bootstrap</a>
+            <a href="home.php" class="tagc2">Bootstrap</a>
             
-            <a href="home.html" class="tagc2">SQL</a>
+            <a href="home.php" class="tagc2">SQL</a>
             
-            <a href="home.html" class="tagc2">Clean Code</a>
+            <a href="home.php" class="tagc2">Clean Code</a>
             
             
            
