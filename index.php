@@ -288,7 +288,7 @@ p a:hover { color: red; }
 </style>
 </head>
 <body>
-<div style="margin-top:-3px; margin-bottom:-20px"><a href="home.html"><img src="images/3logo12.png" /></a><h4 style="color:#F00; margin-top:-10px; margin-left:100px">clean code matters!</h4></div>
+<div style="margin-top:-3px; margin-bottom:-20px"><a href="home.php"><img src="images/3logo12.png" /></a><h4 style="color:#F00; margin-top:-10px; margin-left:100px">clean code matters!</h4></div>
 <a href="home.html">
 <div id="bg_container">
 
