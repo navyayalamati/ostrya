@@ -554,7 +554,7 @@
 		
 	/*----*****---- << 2.3. Header >> ----*****----*/
 
-	#header-wrapper-sticky-wrapper { max-width: 100%; float:left; width:100%; }
+	#header-wrapper-sticky-wrapper { max-width: 100%; float:left; width:100%; height:105px; }
 	
 	#header-wrapper { float:left; width:100%; z-index:99999; }
 	.header { width:100%; margin:0px; padding:0px; float:left; position:relative; z-index:9999; background-color:#ffffff; box-shadow:0 2px 5px -2px rgba(0, 0, 0, 0.15); -moz-box-shadow:0 3px 6px -2px rgba(0, 0, 0, 0.15); -webkit-box-shadow:0 3px 6px -2px rgba(0, 0, 0, 0.15); }
@@ -572,7 +572,7 @@
 	
 	.menu-container { float:left; width:100%; }
 	
-	#logo { float:left; display:inline; padding:22px 0px 19px 0px; margin:0px; }
+	#logo { float:left; display:inline; padding:22px 0px 0px 0px; margin:0px; }
 	#logo a { width:100%; display:block; }
 	#logo a img { max-width:100%; }
 	.header5 #logo { padding-left:20px; }

@@ -4,13 +4,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<title>TAG CLOUD</title>
+<title>Ostrya Labs Pvt Ltd.</title>
 
 
 <script type="text/javascript">
-	/**
-	http://www.oleou.com/a/jishu/2014/0613/290.html
-	**/
+	
 	function TagCould(container,options){
 		this.radius = 150;
 		this.dtr = Math.PI/180;
@@ -290,10 +288,11 @@ p a:hover { color: red; }
 </style>
 </head>
 <body>
-<div style="margin-top:-3px; margin-bottom:-20px"><img src="images/3logo12.png" /><h4 style="color:#F00; margin-top:-10px; margin-left:100px">clean code matters!</h4></div>
+<div style="margin-top:-3px; margin-bottom:-20px"><a href="home.html"><img src="images/3logo12.png" /></a><h4 style="color:#F00; margin-top:-10px; margin-left:100px">clean code matters!</h4></div>
+<a href="home.html">
 <div id="bg_container">
 
-  <video id="bg" src="video.mp4" autoplay="true" loop="true" muted="true"></video>
+  <video id="bg" src="video.m4v" autoplay="true" loop="true" muted="true"></video>
 </div>
 <div id="content" style="margin-left:48%; margin-top:10px">
 
@@ -375,6 +374,7 @@ p a:hover { color: red; }
 
             
 </div>
+</a>
 </div>
 </body>
 </html>

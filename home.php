@@ -5,13 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Ostrya Labs</title>
+	<title>Ostrya Labs Pvt Ltd.</title>
 	
 	<meta name="description" content="Ostrya Labs PVT LTD is an IT services company working with a wide range of business domains, specialized in Ruby on Rails, Angular JS and Mobile[iOS and Android] technologies.">
 	<meta name="author" content="">
 	<meta name="keywords" content="Ostrya,Labs,Software,Development,Software Development,Ruby,Rails,Ruby on rails,ROR,E commerce,Android,IOS,.NET,ASP,Html,UI,CSS,AngularJS,Jscript,Java script,Services,Web,ERP,Product Development,End to end,Apps,Mobile,open source,Finance,Inventory management">
 	
-	 
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     
     <!-- **CSS - stylesheets** -->
@@ -26,6 +25,7 @@
     
     <!-- **Font Awesome** -->
 	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+
  
 <script type="text/javascript">
 
@@ -203,14 +203,14 @@ function createDiv(height, width) {
 <div class="wrapper"> 
 	<div class="inner-wrapper">
     	
-        <div id="header-wrapper" class="header-mean-wrapper">
+        <div id="header-wrapper" class="header-mean-wrapper" style="height:104px">
 	        <!-- **Header** -->
 	        <header class="header">
 	        	<div class="container">
 	            
 	                <!-- **Logo - End** -->
-	                <div id="logo">
-	                    <a href="index.html" title="Ostrya Labs"> <img src="images/logo.png" alt="logo"/> </a>
+	                <div id="logo" style="margin-bottom: -8px;">
+	                    <a href="home.html" title="Ostrya Labs"> <img src="images/logo.png" alt="logo"/><h6 style="color:#F00; margin-top:-10px; margin-left:79px"><b>Clean Code Matters!</b></h6> </a>
 	                </div><!-- **Logo - End** -->
 	                
 	                <div id="menu-container">
@@ -221,7 +221,6 @@ function createDiv(height, width) {
                                 <li><a href="#services">Services</a></li>
                                 <li><a href="#team">Team</a></li>
                                 <li><a href="#portfolio">Portfolio</a></li>
-                                <li><a href="#blog">Blog</a></li> 
                                 <li><a href="#contacts">Contact</a></li>
 	                        </ul>
 	                    </nav>
@@ -231,9 +230,14 @@ function createDiv(height, width) {
 	            </div>
 	        </header><!-- **Header - End** -->
         </div>
+         
+         <div id="home">
+            <!-- **banner - Starts** -->
+            <div class="banner">
+                <img src="images/banner.jpg" style="width:100%" alt="1920x895"/>
+            </div><!-- **banner - Ends** -->
+        </div>
        
-        
-           
         <!-- **Main - Starts** --> 
 		<div id="main">
         	<section id="services">        
@@ -663,7 +667,11 @@ function createDiv(height, width) {
                 <!-- **Full-width-section - Starts** -->
                 <div class="full-width-section">
                     <!--sdsd-->
-                    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="1348" height="443" src="https://maps.google.com/maps?hl=en&q=Vindhya c4,IIIT campus,Gachibowli&ie=UTF8&t=roadmap&z=16&iwloc=B&output=embed"><div><small><a href="http://embedgooglemaps.com">by embedgooglemaps.com</a></small></div><div><small><a href="http://embedgooglemaps.com">embed google maps here</a></small></div></iframe>
+
+
+<!--<iframe style="height:500px;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=ostryalabs&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe>-->
+                  <a href="https://www.google.co.in/maps/place/Ostrya+Labs/@17.4447918,78.3483098,15z/data=!4m2!3m1!1s0x0:0x6bfc03282dfc4336?sa=X&ved=0CG4Q_BIwD2oVChMIwsOBr9z4xwIVlQuOCh1BUQpu"  target="_blank">  <img src="images/map.png" alt="map"/></a>
+                    
                     <div class="dt-sc-margin50"></div>
                     <div class="container">
                         <div class="column dt-sc-three-fourth first animate" data-animation="fadeInRight" data-delay="100">
