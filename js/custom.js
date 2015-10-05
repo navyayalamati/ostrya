@@ -246,7 +246,7 @@ jQuery(document).ready(function($){
 				if(column != '') column = column; else column = 1;
 				jQuery(this).carouFredSel({
 					responsive:true,
-					auto:true,
+					auto:false,
 					width:'100%',
 					prev:'.testimonial-prev',
 					next:'.testimonial-next',

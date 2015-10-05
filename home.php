@@ -26,172 +26,6 @@
     <!-- **Font Awesome** -->
 	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
 
- 
-<script type="text/javascript">
-
-var colour="#FFFFF0";
-var sparkles=260;
-var x=ox=400;
-var y=oy=300;
-var swide=800;
-var shigh=600;
-var sleft=sdown=0;
-var tiny=new Array();
-var star=new Array();
-var starv=new Array();
-var starx=new Array();
-var stary=new Array();
-var tinyx=new Array();
-var tinyy=new Array();
-var tinyv=new Array();
-
-window.onload=function() { if (document.getElementById) {
-  var i, rats, rlef, rdow;
-  for (var i=0; i<sparkles; i++) {
-    var rats=createDiv(3, 3);
-    rats.style.visibility="hidden";
-    document.body.appendChild(tiny[i]=rats);
-    starv[i]=0;
-    tinyv[i]=0;
-    var rats=createDiv(5, 5);
-    rats.style.backgroundColor="transparent";
-    rats.style.visibility="hidden";
-    var rlef=createDiv(1, 5);
-    var rdow=createDiv(5, 1);
-    rats.appendChild(rlef);
-    rats.appendChild(rdow);
-    rlef.style.top="2px";
-    rlef.style.left="0px";
-    rdow.style.top="0px";
-    rdow.style.left="2px";
-    document.body.appendChild(star[i]=rats);
-  }
-  set_width();
-  sparkle();
-}}
-
-function sparkle() {
-  var c;
-  if (x!=ox || y!=oy) {
-    ox=x;
-    oy=y;
-    for (c=0; c<sparkles; c++) if (!starv[c]) {
-      star[c].style.left=(starx[c]=x)+"px";
-      star[c].style.top=(stary[c]=y)+"px";
-      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-      star[c].style.visibility="visible";
-      starv[c]=50;
-      break;
-    }
-  }
-  for (c=0; c<sparkles; c++) {
-    if (starv[c]) update_star(c);
-    if (tinyv[c]) update_tiny(c);
-  }
-  setTimeout("sparkle()", 40);
-}
-
-function update_star(i) {
-  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-  if (starv[i]) {
-    stary[i]+=1+Math.random()*3;
-    if (stary[i]<shigh+sdown) {
-      star[i].style.top=stary[i]+"px";
-      starx[i]+=(i%5-2)/5;
-      star[i].style.left=starx[i]+"px";
-    }
-    else {
-      star[i].style.visibility="hidden";
-      starv[i]=0;
-      return;
-    }
-  }
-  else {
-    tinyv[i]=50;
-    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-    tiny[i].style.width="2px";
-    tiny[i].style.height="2px";
-    star[i].style.visibility="hidden";
-    tiny[i].style.visibility="visible"
-  }
-}
-
-function update_tiny(i) {
-  if (--tinyv[i]==25) {
-    tiny[i].style.width="1px";
-    tiny[i].style.height="1px";
-  }
-  if (tinyv[i]) {
-    tinyy[i]+=1+Math.random()*3;
-    if (tinyy[i]<shigh+sdown) {
-      tiny[i].style.top=tinyy[i]+"px";
-      tinyx[i]+=(i%5-2)/5;
-      tiny[i].style.left=tinyx[i]+"px";
-    }
-    else {
-      tiny[i].style.visibility="hidden";
-      tinyv[i]=0;
-      return;
-    }
-  }
-  else tiny[i].style.visibility="hidden";
-}
-
-document.onmousemove=mouse;
-function mouse(e) {
-  set_scroll();
-  y=(e)?e.pageY:event.y+sdown;
-  x=(e)?e.pageX:event.x+sleft;
-}
-
-function set_scroll() {
-  if (typeof(self.pageYOffset)=="number") {
-    sdown=self.pageYOffset;
-    sleft=self.pageXOffset;
-  }
-  else if (document.body.scrollTop || document.body.scrollLeft) {
-    sdown=document.body.scrollTop;
-    sleft=document.body.scrollLeft;
-  }
-  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-    sleft=document.documentElement.scrollLeft;
-	sdown=document.documentElement.scrollTop;
-  }
-  else {
-    sdown=0;
-    sleft=0;
-  }
-}
-
-window.onresize=set_width;
-function set_width() {
-  if (typeof(self.innerWidth)=="number") {
-    swide=self.innerWidth;
-    shigh=self.innerHeight;
-  }
-  else if (document.documentElement && document.documentElement.clientWidth) {
-    swide=document.documentElement.clientWidth;
-    shigh=document.documentElement.clientHeight;
-  }
-  else if (document.body.clientWidth) {
-    swide=document.body.clientWidth;
-    shigh=document.body.clientHeight;
-  }
-}
-
-function createDiv(height, width) {
-  var div=document.createElement("div");
-  div.style.position="absolute";
-  div.style.height=height+"px";
-  div.style.width=width+"px";
-  div.style.overflow="hidden";
-  div.style.backgroundColor=colour;
-  return (div);
-}
-// ]]>
-</script>
-
 </head>
 
 <body>
@@ -349,7 +183,7 @@ function createDiv(height, width) {
                             <ul class="dt-sc-testimonial-carousel">
                                 <li> <div class="dt-sc-testimonial">
                                     <h5 style="text-shadow: 1px 1px 3px #000000">“Ostrya Labs did an excellent job in delivering an application on CBT in the required time frame and the results have been very good and satisfactory. The developers are very professional, prompt and cooperative. I would highly recommend them for any sort of Computer Application Development."</h5>
-                                    <span style="text-shadow: 0.5px 0.5px 1px #000000">Mrs. T. Vamshi Mohana</span><br><span>Head, Department of Computer Science,</span><br><span>R.B.V.R.R. Women's College.</span>
+                                    <span style="text-shadow: 0.5px 0.5px 1px #000000">Mrs. T. Vamshi Mohana</span><br><span style="text-shadow: 1px 1px 3px #000000">Head, Department of Computer Science,</span><br><span style="text-shadow: 1px 1px 3px #000000">R.B.V.R.R. Women's College.</span>
                                     <div class="dt-sc-margin30"></div>
                                     <div class="author">
                                         <img src="images/vamshi.jpg" alt="image"/>
@@ -358,7 +192,7 @@ function createDiv(height, width) {
                                 
                                 <li> <div class="dt-sc-testimonial">
                                     <h5 style="text-shadow: 1px 1px 3px #000000">“Ostrya Labs is one of the best Ruby on Rails company you can find in Hyderabad. They helped in refining the requirements too. The team delivered the work to our satisfaction in all the engagements and we recommend them wholeheartedly."<br><br><br></h5>
-                                    <span style="text-shadow: 0.5px 0.5px 1px #000000"> Mr. Santhosh Shukla </span><br><span>Director, F1Circle.</span>
+                                    <span style="text-shadow: 0.5px 0.5px 1px #000000"> Mr. Santhosh Shukla </span><br><span style="text-shadow: 1px 1px 3px #000000">Director, F1Circle.</span>
                                     <div class="dt-sc-margin30"></div>
                                     <div class="author">
                                         <img src="images/santhosh.png" alt="image"/>
@@ -367,8 +201,8 @@ function createDiv(height, width) {
                                 
                                 <li> <div class="dt-sc-testimonial">
                                     <h5 style="text-shadow: 1px 1px 3px #000000">“My expectations from the workshop was merely to understand the Rails framework, and get over the initial pain that a developer goes through in the process of learning a new framework/technology himself. Arun is one of the thorough professionals and the in-depth knowledge of the topics showed during the workshop."<br></h5>
-                                    <span style="text-shadow: 0.5px 0.5px 1px #000000"> Mr. Ritesh Gupta </span><br><span>Senior Technical Architect(Java),</span>
-                                    <br><span>13 years experience in IT</span>
+                                    <span style="text-shadow: 0.5px 0.5px 1px #000000;"> Mr. Ritesh Gupta </span><br><span style="text-shadow: 1px 1px 3px #000000">Senior Technical Architect(Java),</span>
+                                    <br><span style="text-shadow: 1px 1px 3px #000000">13 years experience in IT</span>
                                     <div class="dt-sc-margin30"></div>
                                     <div class="author">
                                         <img src="images/ritesh.jpg" alt="image"/>
@@ -405,68 +239,62 @@ function createDiv(height, width) {
                         <h2 class="aligncenter">Our Team</h2>
                         <p class="middle-align">Dedicated group of professionals determined to provide software solutions in the most innovative way. </p>	
                         <div class="dt-sc-hr-invisible-small" ></div>
-                        
-                        <div class="column dt-sc-one-fourth first" style="margin-left:13%">
+                        <div style="margin-left:7%">
+                        <div class="column dt-sc-one-full">
                             <!-- **dt-sc-team - Starts** -->
                             <div class="dt-sc-team">
                                 <div class="image"><img src="images/gopika.jpg" alt="Gopika"/></div>
                                 <!-- **team-details - Starts** -->
                                 <div class="team-details">
-                                    <h6><a href="#">Gopika</a></h6>
+                                    <h6>Gopika</h6>
                                     <p>Director & CEO</p>
                                 </div> <!-- **team-details - Ends** -->
                                 <!-- **dt-sc-social-icons - Starts** -->
                                 <ul class="dt-sc-social-icons">
                                     <li> <a href="#" title=""> <span class="fa fa-twitter"></span>  </a> </li>
                                     <li> <a href="#" title=""> <span class="fa fa-facebook"></span>  </a> </li>
-                                    <li> <a href="#" title=""> <span class="fa fa-behance"></span>  </a> </li>
-                                    <li> <a href="#" title=""> <span class="fa fa-dribbble"></span>  </a> </li>
                                     <li> <a href="#" title=""> <span class="fa fa-linkedin"></span>  </a> </li>
                                 </ul> <!-- **dt-sc-social-icons - Ends** -->
                             </div><!-- **dt-sc-team - Ends** -->
-                        </div> <!-- **column - Ends** -->
+                        </div><!-- **column - Ends** -->
                         <!-- **column - Starts** -->
-                        <div class="column dt-sc-one-fourth">
+                        <div class="column dt-sc-one-third">
                             <!-- **dt-sc-team - Starts** -->
                             <div class="dt-sc-team">
                                 <div class="image"><img src="images/hari.jpg" alt="Hari"/></div>
                                 <!-- **team-details - Starts** -->
                                 <div class="team-details">
-                                    <h6><a href="#">Srihari</a></h6>
+                                    <h6>Srihari</h6>
                                     <p>Director & Marketing</p>
                                 </div> <!-- **team-details - Ends** -->
                                 <!-- **dt-sc-social-icons - Starts** -->
                                 <ul class="dt-sc-social-icons">
                                     <li> <a href="#" title="twitter"> <span class="fa fa-twitter"></span>  </a> </li>
                                     <li> <a href="#" title="facebook"> <span class="fa fa-facebook"></span>  </a> </li>
-                                    <li> <a href="#" title="behance"> <span class="fa fa-behance"></span>  </a> </li>
-                                    <li> <a href="#" title="dribbble"> <span class="fa fa-dribbble"></span>  </a> </li>
                                     <li> <a href="#" title="linkedin"> <span class="fa fa-linkedin"></span>  </a> </li>
                                 </ul> <!-- **dt-sc-social-icons - Ends** -->
                             </div><!-- **dt-sc-team - Ends** -->
                         </div> <!-- **column - Ends** -->
                         <!-- **column - Starts** -->
-                        <div class="column dt-sc-one-fourth">
+                        <div class="column dt-sc-one-third">
                             <!-- **dt-sc-team - Starts** -->
                             <div class="dt-sc-team">
                                 <div class="image"><img src="images/arun.jpg" alt="Arun"/></div>
                                 <!-- **team-details - Starts** -->
                                 <div class="team-details">
-                                    <h6><a href="#">Arun</a></h6>
+                                    <h6>Arun</h6>
                                     <p>Founder & Technical Advisor</p>
                                 </div> <!-- **team-details - Ends** -->
                                 <!-- **dt-sc-social-icons - Starts** -->
                                 <ul class="dt-sc-social-icons">
                                     <li> <a href="#" title="twitter"> <span class="fa fa-twitter"></span>  </a> </li>
                                     <li> <a href="#" title="facebook"> <span class="fa fa-facebook"></span>  </a> </li>
-                                    <li> <a href="#" title="behance"> <span class="fa fa-behance"></span>  </a> </li>
-                                    <li> <a href="#" title="dribbble"> <span class="fa fa-dribbble"></span>  </a> </li>
                                     <li> <a href="#" title="linkedin"> <span class="fa fa-linkedin"></span>  </a> </li>
                                 </ul> <!-- **dt-sc-social-icons - Ends** -->
                             </div><!-- **dt-sc-team - Ends** -->
                         </div> <!-- **column - Ends** -->
                         <!-- **column - Starts** -->
-                        
+                        </div>
                     </div>
                     <div class="dt-sc-margin30"></div>
                     <div class="hr-line"></div>
@@ -559,7 +387,7 @@ function createDiv(height, width) {
                             <!-- **portfolio-thumb - Starts** -->
                             <div class="portfolio-thumb">
                                 <figure>
-                                    <img src="New folder/Mediamkt.jpg" alt="image"/>
+                                    <img src="New folder/mediamkt.jpg" alt="image"/>
                                     <div class="image-overlay">
                                         <a class="zoom" href="New folder/mediamkt.jpg" data-gal="prettyPhoto[gallery]"><span class="fa fa-search"></span></a>
                                         <a class="link" href="portfolio-detail-v2.html"><span class="fa fa-link"></span></a>
@@ -703,7 +531,7 @@ function createDiv(height, width) {
                             <p class="dt-sc-contact-detail"> We are located at IIIT in Gachibowli. Send us an email, give us a call, or fill out our Project Brief if you're interested in getting started.  </p>
                             <!-- **dt-sc-contact-info - Starts** -->
                             <div class="dt-sc-contact-info">
-                                <p> <i class="fa fa-location-arrow"></i> IIIT-H Campus,2nd Floor, Vindhya C4, Gachibowli, Hyderabad<br/> &ensp;&ensp;&ensp;India </p>
+                                <p> <i class="fa fa-location-arrow"></i> CIE,2nd Floor, Vindhya C4,IIIT-H Campus, Gachibowli, Hyderabad<br/> &ensp;&ensp;&ensp;India<br>&ensp;&ensp;&ensp;Pincode: 500017 </p>
                                 <p> <i class="fa fa-phone"></i> +91-(986)640-2306</p>
                                 <p> <i class="fa fa-globe"></i> <a href="http://www.ostryalabs.com"> ostryalabs.com </a> </p>
                                 <p> <i class="fa fa-envelope"></i> <a href="mailto:info@ostryalabs.com"> info@ostryalabs.com </a> </p>
@@ -714,7 +542,7 @@ function createDiv(height, width) {
                         	<div class="dt-sc-contact-info type2">
                             	<div class="dt-sc-contact-detail">
                                     <h4> Contact us by Phone </h4>
-                                    <p> Phone Timings: 0800-2000 hrs </p>
+                                    <p> Phone Timings: 08:00-20:00 hrs </p>
                                 </div>
                                 <div class="contact-icon">
                                 	<span class="fa fa-phone"></span>
@@ -730,7 +558,7 @@ function createDiv(height, width) {
                                 </div>
                                 <div class="contact-icon">
                                 	<span class="fa fa-envelope-o"></span>
-                                    <h4> <a href="#"> feedback@Ostryalabs.com </a> </h4>
+                                    <h4> <a href="#"> feedback@ostryalabs.com </a> </h4>
                                 </div>
                             </div>
                         </div>
@@ -742,7 +570,7 @@ function createDiv(height, width) {
                                 </div>
                                 <div class="contact-icon">
                                 	<span class="fa fa-headphones"></span>
-                                    <h4> <a href="#"> Support Centre </a> </h4>
+                                    <h4> <a href="mailto:info@ostryalabs.com"> Contact Support </a> </h4>
                                 </div>
                             </div>
                         </div>
@@ -784,23 +612,18 @@ function createDiv(height, width) {
                     <ul class="dt-sc-social-icons">
                         <li><a class="dt-sc-tooltip-top facebook" href='#' target="_blank" title="Facebook"> <i class="fa fa-facebook"></i> </a></li>
                         <li><a class="dt-sc-tooltip-top twitter" href='#' target="_blank" title="Twitter"> <i class="fa fa-twitter"></i> </a></li>
-                        <li><a class="dt-sc-tooltip-top google-plus" href='#' target="_blank" title="Google-plus"> <i class="fa fa-google-plus"></i> </a></li>
-                        <li><a class="dt-sc-tooltip-top pinterest" href='#' target="_blank" title="Pinterest"> <i class="fa fa-pinterest"></i> </a></li>
-                        <li><a class="dt-sc-tooltip-top youtube" href='#' target="_blank" title="Youtube"> <i class="fa fa-youtube"></i> </a></li>
+                        <li><a class="dt-sc-tooltip-top linkedin" href='https://www.linkedin.com/company/ostrya-labs' target="_blank" title="Linkedin"> <i class="fa fa-linkedin"></i> </a></li>
+
+                        
                     </ul>
                     <div class="dt-sc-hr-invisible"></div>
                 </div>
             
                 <div class="copyright">
                     <div class="container">
-                        <p>Ostrya Labs © 2015 <a href="#">Ostrya Labs</a></p>
+                        <p>Copyright © 2015 <a href="#">by Ostrya Labs Pvt.Ltd.</a></p>
                         <ul class="footer-links">
-                            <li><a href="index.html">Home</a>/</li>
-                            <li><a href="about.html">About</a>/</li>
-                            <li><a href="tabs-accordions.html">Pages</a>/</li>
-                            <li><a href="blog.html">Blog</a>/</li>
-                            <li><a href="portfolio-3-column-without-space.html">Portfolio</a>/</li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="http://ostryalabs.com">ostryalabs.com</a></li>
                         </ul>
                     </div>
                 </div>
